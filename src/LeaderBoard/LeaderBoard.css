@@ -1,0 +1,19 @@
+.heading{
+  font-family: 'Dancing Script', 'cursive';
+  text-align: center;
+  margin: 5% auto 0;
+}
+.ScoreBorad{
+  font-family: cursive;
+  margin: 3% auto;
+  /*border: 1px solid white;*/
+  border: collapse;
+}
+/* table, td
+{
+  border: 1px solid white;
+}
+
+td{
+  padding: 15px 150px;
+} */

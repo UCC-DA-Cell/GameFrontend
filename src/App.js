@@ -1,23 +1,60 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react'
+import MainNav from './Imported/MainNav'
+import SlideShow from './Imported/SlideShow'
+import ContentSection from './Imported/ContentSection'
+import Video_content from './Imported/Video_content'
 
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import HomePage from './HomePage/HomePage';
+import Auth from './Authentication/Auth';
+import { AuthContext } from './Authentication/Auth-context/authContext';
+import Register from './Register and Rounds/RegisterPage/Register';
+import Round_1Page from './Register and Rounds/Round_1/Round_1Page';
+import Quiz from './Register and Rounds/Round_1/Quiz';
+import AboutPage from './AboutUs/AboutPage';
+import Panel from './userPanel/Panel'
+require('dotenv').config()
 function App() {
+  const [isLoggedIn,setIsLoggedIn]=useState(false);
+  const login=()=>{
+       setIsLoggedIn(true);
+  }
+  const logout=()=>{
+    setIsLoggedIn(false);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+ 
+     <Router>
+       <AuthContext.Provider value={{login,logout,isLoggedIn}}  >
+       <Switch>
+       <Route path="/" exact>
+         <HomePage />
+       </Route>
+       <Route path="/auth" exact>
+         <Auth />
+       </Route>
+       <Route path="/register" exact>
+        <Register />
+       </Route>
+       <Route path="/about" exact>
+        <AboutPage />
+       </Route>
+       <Route path="/user" exact>
+         <Panel />
+       </Route>
+       <Route path="/:userId/start" exact>
+         <Round_1Page />
+       </Route>
+       <Route path="/Round1_begins" exact>
+         <Quiz />
+       </Route>
+       </Switch>
+       </AuthContext.Provider>
+     </Router>
+
     </div>
   );
 }

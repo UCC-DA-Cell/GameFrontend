@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Style all input fields */
+
+form{
+  text-align: center;
+  font-size: 20px;
+  background-color: #022140;
+  margin-top:50px;
+  margin-left:500px;
+  margin-right:300px; 
+  padding top:300px;
+padding-bottom: 200px
+padding-left:200px;
+  border-left: 100px;
+  border-right: 100px; 
+  table-layout: relative;
+  width:400px;
+  height:300px;
+  padding-top:100px;
+  border-radius: 30px;
+  color:white;
+  box-shadow: 0px 0px 5px 5px #022140;
+}
+
+input{
+  height:30px;
+  margin:10px 20px;
+  width:200px;
+border-radius:10px;
+margin-left:50px;
+}
+input[type=submit] {
+  background-color: white;
+  
+  width:120px;
+  height:40px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgb(102,255,255);
+}
+body{
+  background-color: #265077;
+  color:white;
+}
+
+
+.login{
+  padding:0px 50px;
+  border:10px;
+  width:300px;
+}
+.welcome{
+color:rgb(102,255,255);
+margin-left:480px;
+margin-top:100px;
+font-size:50px;
+font-family: georgia,serif;
+font-style: italic;
+}
+
+</style>
+</head>
+<body>
+<div class="welcome">
+  <p>Welcome to login page</p>
+</div>
+<div class="form">
+
+  <form action="./submission.html">
+  
+    <label for="email">E-mail</label><br>
+    <input type="email" id="email"><br>
+    <label for="psw">Password</label><br>
+    <input type="password" id="psw" name="psw" pattern=".{8,}" title="atleast 8 or more characters" required><br>
+
+    
+    <input type="submit" value="Login"><br>
+
+  </form>
+</div>
+
+
+
+
+</body>
+</html>

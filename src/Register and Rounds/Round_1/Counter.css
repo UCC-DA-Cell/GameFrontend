@@ -1,0 +1,50 @@
+.counter{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    width:100vw;
+}
+.countdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.countdown div{
+    margin:1.2rem;
+    position:relative;
+    font-size: 30px;
+}
+.countdown div:after{
+    content:'';
+    margin-left: 0.1rem;
+    position:absolute;
+    bottom:-28px;
+    /* right:10px; */
+    left:-2px;
+    width:100%;
+    height:30px;
+    width:40px;
+    background-color: #265077;
+    padding:5px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+.countdown #day:after{
+   justify-content: center;
+  content:'Days'
+}
+.countdown #hour:after{
+  
+    content:'Hrs'
+  }
+  .countdown #minute:after{
+    
+    content:'Min'
+  }
+  .countdown #second:after{
+   
+    content:'Sec'
+  }

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+.main__regsiter{
+    height:100vh;
+    background-color: rgba(59, 58, 58, 0.808);
+}
+.register__page{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.register__page h1{
+    text-align: center;
+    font-family: 'Sriracha', cursive;
+}
+.flex_box_events{
+    display: flex;
+    flex-direction: column;
+    margin:3rem;
+}

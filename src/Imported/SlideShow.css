@@ -1,0 +1,10 @@
+.each-slide{
+    height: 100vh;
+    width:100%
+}
+.each-slide h1{
+    display: inline;
+    color:white;
+    position: relative;
+    bottom:500px;
+}
