@@ -1,11 +1,16 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import './Counter.css'
+import {Link} from 'react-router-dom'
+import { Button } from 'reactstrap'
 const Counter = () => {
-    let finalDate= new Date('Feb 28,2021 23:40:00').getTime();
+    const [startbtn,setStartBtn]=useState(true);
+    let finalDate= new Date('Feb 27,2021 14:54:00').getTime();
 const calculate=()=>{
     const now= new Date().getTime();
     const diff=finalDate-now;
     if(diff<=0){
+        setStartBtn(false);
+            clearInterval(ID);
         return;
     }
     const sec=1000;
@@ -38,7 +43,13 @@ const calculate=()=>{
     const ID=setInterval(calculate,1000);
     if(d && h && m && s ){
         if(d.innerHTML<=0 && h.innerHTML<=0 && m.innerHTML<=0 && s.innerHTML<=0){
-            clearInterval(ID);
+            //console.log('stop')
+            //console.log(startbtn)
+            if(startbtn){
+                setStartBtn(false);
+            }
+           
+            //clearInterval(ID);
         }
        
     }
@@ -54,6 +65,7 @@ const calculate=()=>{
                <div id="minute">NA</div>
                <div id="second">NA</div>
             </div>
+            <Button style={{marginTop:'20px'}} color="success" disabled={startbtn} size="sm" ><Link to="/Round1_begins">START</Link></Button>
         </div>
     )
 }

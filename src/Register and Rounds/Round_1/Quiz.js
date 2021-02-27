@@ -102,18 +102,18 @@ const Quiz = () => {
                 </div>
             ))}
 
-            <Button color="danger" onClick={showLeaderBoardHandler}>LeaderBoard</Button>
+            {/* <Button color="danger" onClick={showLeaderBoardHandler}>LeaderBoard</Button> */}
             <div id="round_1_complete" >
              <h2>Thank-You For Submitting </h2>
                 <h4>Your Score: NA </h4>
                 <Button color="success"><Link to="/">Go to Home Page </Link> </Button>
             </div>
             </main>
-            { showLeaderBoard && (
+            
                 <div>
                     <LeaderBoard />
                 </div>
-            )}
+            
         </div>
     )
 }
