@@ -362,7 +362,7 @@ margin-left: 0px;
     font-size: 18px;
 }
   
-button {
+.btncard {
     border: none;
     outline: 0;
     display: inline-block;

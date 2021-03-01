@@ -65,7 +65,7 @@ const calculate=()=>{
                <div id="minute">NA</div>
                <div id="second">NA</div>
             </div>
-            <Button style={{marginTop:'20px'}} color="success" disabled={startbtn} size="sm" ><Link to="/Round1_begins">START</Link></Button>
+            <Link to="/Round1_begins"><Button style={{marginTop:'20px'}} color="success" disabled={startbtn}  >START</Button></Link>
         </div>
     )
 }

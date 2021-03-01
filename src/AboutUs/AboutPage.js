@@ -95,7 +95,7 @@ const AboutPage = () => {
                 <p style={{color:'black',marginBottom:'0'}} >Harvard University</p>
                 <a href="#"><i className="fa fa-instagram"></i></a>
                 <a href="#"><i className="fa fa-facebook"></i></a>
-                <p><button>Contact</button></p>
+                <p><button className={classes.btncard} >Contact</button></p>
             </div>
             <div className={classes.card}>
                 <img src={ProfPic} alt="John" style={{width:'100%'}} />
@@ -104,7 +104,7 @@ const AboutPage = () => {
                 <p style={{color:'black',marginBottom:'0'}} >Harvard University</p>
                 <a href="#"><i className="fa fa-instagram"></i></a>
                 <a href="#"><i className="fa fa-facebook"></i></a>
-                <p><button>Contact</button></p>
+                <p><button className={classes.btncard} >Contact</button></p>
             </div>
             <div className={classes.card}>
                 <img src={ProfPic} alt="John" style={{width:'100%'}} />
@@ -113,7 +113,7 @@ const AboutPage = () => {
                 <p style={{color:'black',marginBottom:'0'}} >Harvard University</p>
                 <a href="#"><i className="fa fa-instagram"></i></a>
                 <a href="#"><i className="fa fa-facebook"></i></a>
-                <p><button>Contact</button></p>
+                <p><button className={classes.btncard} >Contact</button></p>
             </div>
             <div className={classes.card}>
                 <img src={ProfPic} alt="John" style={{width:'100%'}} />
@@ -122,7 +122,7 @@ const AboutPage = () => {
                 <p style={{color:'black',marginBottom:'0'}} >Harvard University</p>
                 <a href="#"><i className="fa fa-instagram"></i></a>
                 <a href="#"><i className="fa fa-facebook"></i></a>
-                <p><button>Contact</button></p>
+                <p><button className={classes.btncard} >Contact</button></p>
               </div>
     
             <div className={classes.card}>
@@ -132,7 +132,7 @@ const AboutPage = () => {
                 <p style={{color:'black',marginBottom:'0'}} >Harvard University</p>
                 <a href="#"><i className="fa fa-instagram"></i></a>
                 <a href="#"><i className="fa fa-facebook"></i></a>
-                <p><button>Contact</button></p>
+                <p><button className={classes.btncard} >Contact</button></p>
             </div>    
             <div className={classes.card}>
                 <img src={ProfPic} alt="John" style={{width:'100%'}} />
@@ -141,7 +141,7 @@ const AboutPage = () => {
                 <p style={{color:'black',marginBottom:'0'}} >Harvard University</p>
                 <a href="#"><i className="fa fa-instagram"></i></a>
                 <a href="#"><i className="fa fa-facebook"></i></a>
-                <p><button>Contact</button></p>
+                <p><button className={classes.btncard} >Contact</button></p>
             </div>
             <div className={classes.card}>
                 <img src={ProfPic} alt="John" style={{width:'100%'}} />
@@ -150,7 +150,7 @@ const AboutPage = () => {
                 <p style={{color:'black',marginBottom:'0'}} >Harvard University</p>
                 <a href="#"><i className="fa fa-instagram"></i></a>
                 <a href="#"><i className="fa fa-facebook"></i></a>
-                <p><button>Contact</button></p>
+                <p><button className={classes.btncard} >Contact</button></p>
             </div>
             <div className={classes.card}>
                 <img src={ProfPic} alt="John" style={{width:'100%'}} />
@@ -159,7 +159,7 @@ const AboutPage = () => {
                 <p style={{color:'black',marginBottom:'0'}} >Harvard University</p>
                 <a href="#"><i className="fa fa-instagram"></i></a>
                 <a href="#"><i className="fa fa-facebook"></i></a>
-                <p><button>Contact</button></p>
+                <p><button className={classes.btncard} >Contact</button></p>
             </div>
             <div className={classes.card}>
                 <img src={ProfPic} alt="John" style={{width:'100%'}} />
@@ -168,7 +168,7 @@ const AboutPage = () => {
                 <p style={{color:'black',marginBottom:'0'}} >Harvard University</p>
                 <a href="#"><i className="fa fa-instagram"></i></a>
                 <a href="#"><i className="fa fa-facebook"></i></a>
-                <p><button>Contact</button></p>
+                <p><button className={classes.btncard} >Contact</button></p>
             </div> 
         </div>
     </section>

@@ -5,7 +5,7 @@ const Register = () => {
     return (
         <div className="main__regsiter" >
             <div className="register__page" >
-                <h1>Registration Page for Upcoming Events... </h1>
+                <h1 style={{color:'white'}} >Registration Page for Upcoming Events... </h1>
                 <div className="flex_box_events" >
                    <RegisterCard event_name="XYZ-Event"
                     event_details="This Event

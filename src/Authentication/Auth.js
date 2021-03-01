@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import MainNav from '../Imported/MainNav'
 import {GoogleLogin} from 'react-google-login'
+import lock from './padlock.svg'
 import './Auth.css'
 const Auth = () => {
 console.log(process.env);
@@ -60,27 +61,28 @@ myInput.onkeyup = function() {
 }
 
     return (
-        <div>
+        <div style={{backgroundImage:`url(${`https://wallpaperaccess.com/full/54720.jpg`})`,backgroundAttachment:'fixed',backgroundRepeat:'no-repeat',
+        backgroundSize:'cover',opacity:'0.8',height:'100vh',width:'100vw' }}  >
             <MainNav /><br/><br/><br/><br/>
              <div className="welcomee">
-             <p>Welcome to the UCC-DAC Sign-up page</p>
+             <h2  >Sign-In here</h2>
             </div>
 <div className="form_class">
-
+  <img src={lock} alt="login" style={{height:'40vh',width:'50vw'}} /> 
   <form className="formm" action="./submission.html" onSubmit={onSubmitHandler} >
 { !loggedIn &&  (<div>
-<label for="username">User name</label><br/>
+{/* <label for="username">User name</label> */}
 
-<input className="inpt" type="text" id="username" name="username" required /><br/>
+<input className="inpt" type="text" placeholder="Username" id="username" name="username" required />
     </div>)}
-    <label for="email">E-mail</label><br/>
-    <input className="inpt" type="email" id="email" required /><br/>
-    <label for="psw">Password</label><br/>
-    <input className="inpt" type="password" id="psw" name="psw" pattern=".{8,}" title="atleast 8 or more characters" required /><br/>
+    {/* <label for="email">E-mail</label> */}
+    <input className="inpt" placeholder="Email" type="email" id="email" required />
+    {/* <label for="psw">Password</label> */}
+    <input className="inpt" placeholder="Password" type="password" id="psw" name="psw" pattern=".{8,}" title="atleast 8 or more characters" required /><br/>
 
     
     <button className="signinbtn" type="submit" > {loggedIn ? 'LogIn':'SignUp'}  </button><br/>
-   {!loggedIn && <p><strong>Already have an account??</strong></p>}
+   {!loggedIn && <p style={{marginBottom:'1px'}} ><strong>Already have an account??</strong></p>}
     <div className="loggin">
     <a className="anchor"  onClick={()=>setLoggedIn(prev=>!prev)} > {loggedIn ?'SignUp':'LogIn'}  </a>
     <GoogleLogin
@@ -96,10 +98,10 @@ myInput.onkeyup = function() {
 </div>
 
 
-<div id="message">
+{/* <div id="message">
 
   <p id="length" className="invalidd">Minimum <b>8 characters</b></p>
-</div>
+</div> */}
         </div>
     )
 }
