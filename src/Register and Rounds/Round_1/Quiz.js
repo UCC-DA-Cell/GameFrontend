@@ -101,7 +101,9 @@ const Quiz = () => {
                     />
                 </div>
             ))}
-
+                   <div>
+                    <LeaderBoard />
+                </div>
             {/* <Button color="danger" onClick={showLeaderBoardHandler}>LeaderBoard</Button> */}
             <div id="round_1_complete" >
              <h2>Thank-You For Submitting </h2>
@@ -110,9 +112,7 @@ const Quiz = () => {
             </div>
             </main>
             
-                <div>
-                    <LeaderBoard />
-                </div>
+              
             
         </div>
     )
