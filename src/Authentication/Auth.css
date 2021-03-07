@@ -11,6 +11,8 @@
     /* background-color: #0e70d1; */
     background-color:#5165797c ;
     margin-top:5px;
+    padding-left: 10px;
+    padding-right: 10px;
     /* margin-bottom:15vh; */
     /* margin-left:300px;
     margin-right:300px;  */
@@ -20,12 +22,12 @@
     border-left: 100px;
     border-right: 100px; 
     table-layout: relative;
-    width:400px;
+    
     height:auto;
-    padding-top:50px;
-    border-radius: 30px;
+    padding-top:20px;
+    border-radius: 10px;
     color:white;
-    box-shadow: 0px 0px 5px 5px #022140;
+    box-shadow: 0px 0px 5px 5px #808488;
   }
   
   .inpt{

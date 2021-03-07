@@ -43,6 +43,7 @@
     text-align: center;
     font-size: 10em;
   }
+  
   @media screen and (max-width:766px){
     .d-none{
       display:block;
@@ -51,6 +52,9 @@
       content:'hi there';
         font-size: 10px;
     }
+  }
+  @media screen and (max-width:766px){
+
   }
   @-webkit-keyframes slide {
     20% {margin-left: 0px;}

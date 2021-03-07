@@ -68,14 +68,14 @@ const Example = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <video style={{height:'100vh',width:'100vw',marginLeft:'0'}}  id="slider" autoPlay muted loop  >
+        <video  className="videoSlideShow" style={{height:'100vh',width:'100vw',marginLeft:'0'}}  id="slider" autoPlay muted loop  >
                 <source src={item.src}
                 type="video/mp4" />
             
             </video>
         {/* <img src={item.src} style={{height:'100vh',width:'100vw',marginTop:'50px'}} alt={item.altText} /> */}
         {/* <CarouselCaption captionText={item.caption} captionHeader={item.caption} /> */}
-        <h3 style={{marginTop:'0px',position:'relative',top:'-100px',color:'white'}}  >{item.caption}</h3>
+        <h3 style={{marginTop:'0px',position:'relative',top:'-40vh',color:'white'}}  >{item.caption}</h3>
       </CarouselItem>
     );
   });
