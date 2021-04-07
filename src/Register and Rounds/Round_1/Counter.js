@@ -66,6 +66,8 @@ const calculate=()=>{
                <div id="second">NA</div>
             </div>
             <Link to="/Round1_begins"><Button style={{marginTop:'20px'}} color="success" disabled={startbtn}  >START</Button></Link>
+            <Link to="/round2"><Button style={{marginTop:'20px'}} color="success" disabled={startbtn}  >START</Button></Link>
+            <Link to="/round3"><Button style={{marginTop:'20px'}} color="success" disabled={startbtn}  >START</Button></Link>
         </div>
     )
 }

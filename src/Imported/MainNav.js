@@ -17,7 +17,7 @@ const MainNav = () => {
     
  
     return (
-        <div>
+         <div>
               <div className="navvbar">
   <div className="contaier">
 
@@ -30,20 +30,20 @@ const MainNav = () => {
     </div>
 
       <ul className={`navv navvcollaps ${show && ('show')}`}>
-      <li><NavLink exact to="/" > Home</NavLink></li>
+      <li><NavLink  to="/" exact activeClassName="activa" > Home</NavLink></li>
       { !auth.isLoggedIn ? 
-      <li><NavLink  to="/auth"  activeClassName="activa">Signin</NavLink></li>
+      <li><NavLink  to="/auth" exact activeClassName="activa">Signin</NavLink></li>
      :  <li> <NavLink to="/" onClick={event=>auth.logOut()} >Log Out</NavLink> </li> }
         {/* <li><NavLink exact to="#3" className="normal" activeClassName="activa">Rules</NavLink></li> */}
-        <li><NavLink exact to="/about" activeClassName="activa">About</NavLink></li>
+        <li><NavLink  to="/about" exact activeClassName="activa">About</NavLink></li>
       { auth.isLoggedIn &&
-       <li><NavLink exact to={ auth.isRegistered  ?'/start' : `/register`} activeClassName="activa">{auth.isRegistered ? 'Start Now': `Register for Events`}</NavLink></li>}
+       <li><NavLink exact to={ auth.isRegistered  ?'/start' : `/register`} >{auth.isRegistered ? 'Start Now': `Register for Events`}</NavLink></li>}
       </ul>
 
   </div>
          </div>
-
-        </div>
+         </div>
+       
     )
 }
 

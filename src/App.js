@@ -16,6 +16,8 @@ import Quiz from './Register and Rounds/Round_1/Quiz';
 import AboutPage from './AboutUs/AboutPage';
 import Panel from './userPanel/Panel'
 import LeaderBoard from './LeaderBoard/LeaderBoard';
+import GoogleForm from './Register and Rounds/Round_2/GoogleForm';
+import Finali from './Register and Rounds/Round_3/Finali';
 //require('dotenv').config()
 function App() {
   const [isLoggedIn,setIsLoggedIn]=useState(false);
@@ -80,6 +82,14 @@ useEffect(() => {
          <MainNav />
          <LeaderBoard />
          
+       </Route>
+       <Route path="/round2" exact>
+       <MainNav />
+         <GoogleForm />
+       </Route>
+       <Route path="/round3" exact>
+         <MainNav />
+         <Finali />
        </Route>
        </Switch>
        </AuthContext.Provider>

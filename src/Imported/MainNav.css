@@ -163,7 +163,7 @@ color: #4066e8;
   background:-moz-linear-gradient(#89a4d4, #06255f)
 }
 
-.activa{
+a.activa{
   background:-webkit-linear-gradient(#d9e2f9, #becdf6);
   background:-moz-linear-gradient(#d9e2f9, #becdf6);
   background:linear-gradient(#d9e2f9, #becdf6);
@@ -192,7 +192,7 @@ color: #4066e8;
   background: -moz-linear-gradient(#535458, #1c1d1e2a);
   font-family:arial;
   z-index: 100;
- 
+  margin-bottom: 10px;
 }
 .navvbar.scroll-down{
   padding:5vh;
@@ -260,7 +260,7 @@ color: #4066e8;
   transition: width .3s;
   color: #4066e8;
  }
- .activa{
+ a.activa{
   background:-webkit-linear-gradient(#d9e2f9, #becdf6);
   background:-moz-linear-gradient(#d9e2f9, #becdf6);
   background:linear-gradient(#d9e2f9, #becdf6);

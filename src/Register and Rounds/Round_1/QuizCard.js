@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import { Card,  CardHeader, CardFooter, CardBody,
+import { Card,Col,FormGroup,Label,  CardHeader, CardFooter, CardBody,
     CardTitle, CardText,
     InputGroup,
     InputGroupAddon,
@@ -36,6 +36,7 @@ const QuizCard = (props) => {
   if(res.status==200){
      console.log('correct ans');
      props.setCurrentQues(null);
+     props.setShowNextQues(true);
   }
   else if(res.status==203){
     let ID;
@@ -65,15 +66,21 @@ const QuizCard = (props) => {
   }
     return (
         <div  >
-      { props.ques &&  <Card body inverse color="info" >
+      { props.ques &&  <Card  inverse color="info" >
         <CardHeader>{`Question:${props.ques.questionNumber} `}</CardHeader>
         <CardBody>
           <CardTitle tag="h5">{props.ques.question}</CardTitle>
           <CardText>
           <InputGroup>
-        {/* <InputGroupAddon addonType="prepend"><Button>I'm a button</Button></InputGroupAddon> */}
-        <Input  onChange={valueHandler} />
+        
+        <Input type="text" onChange={valueHandler} />
       </InputGroup>
+      {/* <Col md={6}>
+          <FormGroup>
+            <Label for="exampleState">State</Label>
+            <Input type="text" name="state" id="exampleState"/>
+          </FormGroup>
+        </Col> */}
           </CardText>
           <Button  color="success" onClick={checkQuestionHandler}  >Submit</Button>
         </CardBody>

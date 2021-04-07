@@ -10,8 +10,9 @@ const Quiz = () => {
     const [currentQues,setCurrentQues]=useState(null);
     const [userAns,setUserAns]=useState('');
     const [showLeaderBoard,setShowLeaderBoard]=useState(false);
-    if(!currentQues){
-    //   useEffect(() => {
+    const [showNextQues,setShowNextQues]=useState(true)
+   // if(!currentQues){
+       useEffect(() => {
        const getQues=async()=>{
         
             const res =await  fetch(`${process.env.REACT_APP_SERVER_URL}round1/get-next-question`, {
@@ -33,48 +34,24 @@ const Quiz = () => {
                 console.log(data);
               }
             else{
-               throw Error('Something went wrong could not get question');
+            //    throw Error('Something went wrong could not get question');
+            console.log('waiting....');
             }
 
            
            
       }
          getQues();
-    //    }, [currentQues]) 
-    }
-    const QUIZ_QUESTIONS=[
-        {
-            id:1,
-            text:'What is Your Name ?',
-            ans:'Prajwal'
-        },
-        {
-            id:2,
-            text:'Where do you study',
-            ans:'YMCA'
-        },
-        {
-            id:3,
-            text:'Which Branch ?',
-            ans:'Prajwal'
-        },
-        {
-            id:4,
-            text:'Your Aim',
-            ans:'Dunia pr razz karna hai bc'
-        },
-        {
-            id:5,
-            text:'Your Skills',
-            ans:'React'
-        }
-    ]
+         setShowNextQues(false);
+        }, [showNextQues]) 
+  //  }
    
      const showLeaderBoardHandler=()=>{
          setShowLeaderBoard(prev=>!prev);
      }
     return (
-        <div className="Quiz_box" >
+        <div style={{height:'100vh',width:'100vw'}} >
+        <div className="Quiz_box"  >
            <h1>Quiz- Round 1...<small>All The Best</small></h1>
             <main>
             
@@ -86,11 +63,12 @@ const Quiz = () => {
                     //  question_id={currentQues._id}
                      setUserAns={setUserAns}
                      userAns={userAns}
+                     setShowNextQues={setShowNextQues}
                     />
                 </div>
         
                    <div>
-                    <Button color="danger" style={{marginBottom:'10px'}} ><Link to="/leaderBoard">Show LeaderBoard</Link></Button>
+                    <Button color="danger" style={{margin:'20px',}} ><Link to="/leaderBoard">Show LeaderBoard</Link></Button>
                   </div>
             {/* <Button color="danger" onClick={showLeaderBoardHandler}>LeaderBoard</Button> */}
             <div id="round_1_complete" >
@@ -101,6 +79,7 @@ const Quiz = () => {
             
               
             
+        </div>
         </div>
     )
 }
