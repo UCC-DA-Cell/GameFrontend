@@ -76,6 +76,7 @@ const Example = (props) => {
         {/* <img src={item.src} style={{height:'100vh',width:'100vw',marginTop:'50px'}} alt={item.altText} /> */}
         {/* <CarouselCaption captionText={item.caption} captionHeader={item.caption} /> */}
         <h3 style={{marginTop:'0px',position:'relative',top:'-40vh',color:'white'}}  >{item.caption}</h3>
+       
       </CarouselItem>
     );
   });

@@ -1,4 +1,5 @@
 import React,{useContext} from 'react'
+import './QuizCard.css'
 import { Card,Col,FormGroup,Label,  CardHeader, CardFooter, CardBody,
     CardTitle, CardText,
     InputGroup,
@@ -66,7 +67,7 @@ const QuizCard = (props) => {
   }
     return (
         <div  >
-      { props.ques &&  <Card  inverse color="info" >
+      { props.ques &&  <Card className="res_card"  inverse color="info" >
         <CardHeader>{`Question:${props.ques.questionNumber} `}</CardHeader>
         <CardBody>
           <CardTitle tag="h5">{props.ques.question}</CardTitle>

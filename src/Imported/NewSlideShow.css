@@ -10,7 +10,12 @@
     width: 728px;
     margin: 0 auto;
   }
-  
+  .slider-text{
+    margin-top: 0px;
+    /* position: relative; */
+    /* top:-40vh; */
+    color:white;
+  }
   .slide-wrapper {
     width: 2912px;
     -webkit-animation: slide 18s ease infinite;

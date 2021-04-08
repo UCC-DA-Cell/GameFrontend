@@ -1,8 +1,14 @@
 /* Style all input fields */
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
 .form_class{
     display: flex;
     justify-content: center;
     text-align: center;
+    flex-wrap: wrap;
+}
+.signIn__text{
+  font-size: 3rem;
+  font-family: 'Lobster Two', cursive;
 }
 .formm{
     text-align: center;

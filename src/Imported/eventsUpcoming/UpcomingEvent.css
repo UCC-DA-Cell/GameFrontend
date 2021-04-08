@@ -34,7 +34,19 @@
       width: 48%
     }
 } */
-
+/* @media only screen and (max-width: 450px){
+    .sectionn_box {
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+       width: 50%;
+       background: #265077;
+       margin: 10px 5%;
+       padding: 5px 10px;
+     }
+} */
 @media only screen and (max-width: 758px){
     .mainn{
         display:flex;
@@ -45,7 +57,7 @@
         font-family: 'Cormorant Garamond', serif;
     }
     .sectionn_box {
-        /* float: left; */
+      
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -53,7 +65,8 @@
        width: 40%;
        background: #265077;
        margin: 10px 32%;
-       padding: 1%;
+       padding: 3%;
+       font-size: 10px;
      }
      .upcoming_event_class{
         color:#41c0bc;

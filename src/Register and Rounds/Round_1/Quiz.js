@@ -55,7 +55,7 @@ const Quiz = () => {
            <h1>Quiz- Round 1...<small>All The Best</small></h1>
             <main>
             
-                <div id={`q_1`} style={{width:'500px', margin:'5px',color:'blue',justifyContent:'center'}} >
+                <div id={`q_1`} style={{  margin:'5px',color:'blue',justifyContent:'center'}} >
                     <QuizCard 
                      ques={currentQues}
                      setCurrentQues={setCurrentQues}

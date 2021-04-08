@@ -17,6 +17,7 @@ a:hover{
   /* display:flex;
   flex-wrap: wrap; */
   height:auto;
+  width:100vw;
   background:linear-gradient(#5b5c60, #0f1010);
   background:-webkit-linear-gradient(#5b5c60, #0f1010);
   background:-moz-linear-gradient(#5b5c60, #0f1010);
@@ -177,6 +178,7 @@ a.activa{
   display:flex;
   flex-wrap: wrap;
   height:auto;
+  
   padding:3vh;
    /* background:linear-gradient(#5a8eee, #4066e8);
   background:-webkit-linear-gradient(#5a8eee, #4066e8);
@@ -268,6 +270,7 @@ a.activa{
  }
   
 }
+
 @media(min-width:990px){
   .contaier{
     width:950px;
