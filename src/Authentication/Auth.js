@@ -4,6 +4,7 @@ import {GoogleLogin} from 'react-google-login'
 import lock from './padlock.svg'
 import {AuthContext} from '../Authentication/Auth-context/authContext'
 import './Auth.css'
+import MainNav_2 from '../Imported/MainNav_2'
 const Auth = () => {
   const auth=useContext(AuthContext);
   const handleLogin = async googleData => {
@@ -24,7 +25,7 @@ const Auth = () => {
     return (
         <div style={{backgroundImage:`url(${`https://wallpaperaccess.com/full/54720.jpg`})`,backgroundAttachment:'fixed',backgroundRepeat:'no-repeat',
         backgroundSize:'cover', backgroundPosition:'center center', opacity:'0.8',height:'100vh',width:'100vw' }}  >
-            <MainNav /><br/><br/><br/><br/>
+            <MainNav_2 /><br/><br/><br/><br/>
              <div className="welcomee">
              <h2 className="signIn__text"  >Sign-In here</h2>
             </div>

@@ -1,0 +1,267 @@
+/* .main-header {
+    width: 100%;
+    height: 3.5rem;
+    background-color: #00695c;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .main-header__nav {
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .main-header__item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .main-header__item {
+    margin: 0 1rem;
+    padding: 0;
+  }
+  
+  .main-header__item a,
+  .main-header__item button {
+    font: inherit;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .main-header__item a:hover,
+  .main-header__item a:active,
+  .main-header__item a.active,
+  .main-header__item button:hover,
+  .main-header__item button:active {
+    color: #ffeb3b;
+  }
+  
+  .mobile-nav {
+    width: 30rem;
+    height: 100vh;
+    max-width: 90%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: white;
+    z-index: 10;
+    padding: 2rem 1rem 1rem 2rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .mobile-nav.open {
+    transform: translateX(0);
+  }
+  
+  .mobile-nav__item-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mobile-nav__item {
+    margin: 1rem;
+    padding: 0;
+  }
+  
+  .mobile-nav__item a,
+  .mobile-nav__item button {
+    font: inherit;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .mobile-nav__item a:active,
+  .mobile-nav__item a:hover,
+  .mobile-nav__item a.active,
+  .mobile-nav__item button:hover,
+  .mobile-nav__item button:active {
+    background: #00695c;
+    color: white;
+    border-radius: 3px;
+  }
+  
+  #side-menu-toggle {
+    border: 1px solid white;
+    font: inherit;
+    padding: 0.5rem;
+    display: block;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #side-menu-toggle:focus {
+    outline: none;
+  }
+  
+  #side-menu-toggle:active,
+  #side-menu-toggle:hover {
+    color: #ffeb3b;
+    border-color: #ffeb3b;
+  }
+  
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+  } */
+  .carousel {
+    /* background:#007aeb; */
+  }
+  
+  /*
+  Forces image to be 100% width and not max width of 100%
+  */
+  .carousel-item .img-fluid {
+    width:100%;
+  }
+  
+  /*
+  anchors are inline so you need ot make them block to go full width
+  */
+  .carousel-item a {
+    display: block;
+    width:20%;
+  }
+  
+  /* ends */
+  .sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2000; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  .preloader{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  background-color: #fef3e2;
+  content-align: center;
+  margin: auto;
+  }
+  .preloader img{
+    display:block;
+   margin: 200px auto;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  
+  .carousel-fade .carousel-item {
+      opacity: 1;
+  
+  }
+  
+  
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  hr {
+    border: 0 solid #eeedef;
+    border-top-width: 1px;
+    height: 0;
+    margin: 60px auto;
+    clear: both;
+    display: block;
+    width: 50%;
+    position: relative;
+  }
+  /* hr:before {
+    content: " ";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background-color: #999;
+  } */
+   /* -webkit-backface-visibility: hidden; */
+  
+  hr:before {
+    left: 0;
+    bottom: -3px;
+  box-shadow: 400px 0 0 -1px #999, 400px 0 0 0 #aaa;
+  }
+  hr:after {
+    content:url('https://ik.imagekit.io/slashit/choco_divine/121994_bA7-vUbdM.png');
+    display:block;
+    position:absolute;
+    left:50%;
+    height:30px;
+    width:30px;
+    margin:-18px 0 0 -18px;
+    border-radius:50px;
+    overflow:hidden;
+    box-shadow: 0 0 0 1px #eef, 0 0 5px;
+  }
+  
+  
+  
+  hr {transform:scale(2)}
+  
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

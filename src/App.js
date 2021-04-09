@@ -18,6 +18,7 @@ import Panel from './userPanel/Panel'
 import LeaderBoard from './LeaderBoard/LeaderBoard';
 import GoogleForm from './Register and Rounds/Round_2/GoogleForm';
 import Finali from './Register and Rounds/Round_3/Finali';
+import MainNav_2 from './Imported/MainNav_2';
 //require('dotenv').config()
 function App() {
   const [isLoggedIn,setIsLoggedIn]=useState(false);
@@ -70,25 +71,25 @@ useEffect(() => {
          <Panel />
        </Route>
        <Route path="/start" exact>
-         <MainNav />
+         <MainNav_2 />
          <Round_1Page />
        </Route>
        <Route path="/Round1_begins" exact>
-       <MainNav />
+       <MainNav_2 />
          <Quiz />
        </Route>
        <Route path="/leaderBoard" exact>
          
-         <MainNav />
+        <MainNav_2 />
          <LeaderBoard />
          
        </Route>
        <Route path="/round2" exact>
-       <MainNav />
+       <MainNav_2 />
          <GoogleForm />
        </Route>
        <Route path="/round3" exact>
-         <MainNav />
+         <MainNav_2 />
          <Finali />
        </Route>
        </Switch>

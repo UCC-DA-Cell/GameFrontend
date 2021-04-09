@@ -31,13 +31,13 @@ const UpcomingEvent = () => {
                  
                 <div className="mainn" >
                 <article className="sectionn_box"> <h3>Round-1</h3>
-                    Some questions or task will be given to all participants. Questions will be different
-                            for each participants. On the basis of scores they will be qualified to next round.  </article>
+                   <p> Some questions or task will be given to all participants. Questions will be different
+                            for each participants. On the basis of scores they will be qualified to next round.</p>  </article>
       <article className="sectionn_box"> <h3>Round-2</h3>
-          Participants will be asked to upload some pictures on the basis of the given task. </article>
-      <article className="sectionn_box"> <h3>Round-3</h3>Find the web round.  </article>
+         <p> Participants will be asked to upload some pictures on the basis of the given task.</p> </article>
+      <article className="sectionn_box"> <h3>Round-3</h3><p>Find the web round. </p> </article>
       <article className="sectionn_box"> <h3>Round-4</h3>
-          Participants will be asked to upload some pictures on the basis of the given task.  </article>
+        <p> Participants will be asked to upload some pictures on the basis of the given task. </p>  </article>
         
                 </div>
                 <h3>Prizes</h3>

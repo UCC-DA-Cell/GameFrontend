@@ -6,6 +6,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import {useMediaQuery} from 'beautiful-react-hooks'
  import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 const items = [
   {
@@ -23,24 +24,11 @@ const items = [
     altText: 'Register Yourself for the upcoming events..',
     caption: 'Register Yourself for the upcoming events..'
   },
-  // {
-  //   src: 'https://cdn.mos.cms.futurecdn.net/wAHAqJmwwFP7UZFB6YZEXL.jpg',
-  //   altText: 'Welcome to the online gaming App',
-  //   caption: 'Welcome to the online gaming App'
-  // },
-  // {
-  //   src: 'https://wallpaperaccess.com/full/263184.png',
-  //   altText: 'Slide 2',
-  //   caption: 'An amazing App for GamePlay...'
-  // },
-  // {
-  //   src: 'https://i.pinimg.com/originals/30/4c/ef/304cefbf8e08d4e7870109bb0cf20af0.jpg',
-  //   altText: 'Slide 3',
-  //   caption: 'Register Yourself for the upcoming events..'
-  // }
+ 
 ];
 
 const Example = (props) => {
+  const mediaQuery=useMediaQuery('(max-width:450px)')
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -68,14 +56,22 @@ const Example = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <video  className="videoSlideShow" style={{height:'100vh',width:'100vw',marginLeft:'0'}}  id="slider" autoPlay muted loop  >
+      { !mediaQuery &&  <React.Fragment><video  className="videoSlideShow"    style={{ height:'100vh',width:'100vw',marginLeft:'0'}}  id="slider" autoPlay muted loop  >
                 <source src={item.src}
                 type="video/mp4" />
             
             </video>
-        {/* <img src={item.src} style={{height:'100vh',width:'100vw',marginTop:'50px'}} alt={item.altText} /> */}
-        {/* <CarouselCaption captionText={item.caption} captionHeader={item.caption} /> */}
+      
         <h3 style={{marginTop:'0px',position:'relative',top:'-40vh',color:'white'}}  >{item.caption}</h3>
+        </React.Fragment>}
+        { mediaQuery &&  <React.Fragment><video  className="videoSlideShow"    style={{ height:'500px',width:'700px',marginLeft:'0'}}  id="slider" autoPlay muted loop  >
+                <source src={item.src}
+                type="video/mp4" />
+            
+            </video>
+      
+        <h3 style={{marginTop:'0px',position:'relative',top:'-40vh',color:'white'}}  >{item.caption}</h3>
+        </React.Fragment>}
        
       </CarouselItem>
     );

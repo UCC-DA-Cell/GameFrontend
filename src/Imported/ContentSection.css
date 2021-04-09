@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     font-family: 'Cormorant Garamond', serif;
     padding:25px 40px;
-    color:#41c0bc;
+    color:white;
     height:100vh;
     /* width:100vw; */
     margin-top: 10vh;
@@ -15,6 +15,11 @@
     padding:15px 25px;
     justify-content: center;
     align-items: center;
+    text-align: justify;
+}
+.contentPart h1{
+   font-size:  calc(1.375rem + 1.5vw);
+   color:#eac15a;
 }
 .image__part img{
     margin:2rem;

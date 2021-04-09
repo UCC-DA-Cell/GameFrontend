@@ -10,12 +10,14 @@ import Footer from '../Imported/footer/Footer'
 
  import NewSlideShow from '../Imported/NewSlideShow'
 import VideoSlider from '../Imported/VideoSlider/VideoSlider'
+import MainNav_2 from '../Imported/MainNav_2'
 
 
 const HomePage = () => {
     return (
-        <div className="main_homePage" >
-        <MainNav />
+        <div className="main_homePage"style={{backgroundColor:'#2c2f3a'}} >
+            <MainNav_2 />
+        {/* <MainNav /> */}
         
         <NewSlideShow />
         <ContentSection />
