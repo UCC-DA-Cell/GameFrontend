@@ -2,3 +2,9 @@
     height: 80vh;
     width:90vw;
 }
+.bckground_gf{
+    background-image: url('https://i.pinimg.com/originals/55/4d/1a/554d1a1a0c034d27e369c17932e02dea.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

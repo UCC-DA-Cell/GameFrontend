@@ -4,7 +4,11 @@
     padding-top: 15vh;
     display: flex;
     justify-content: center;
-    background-color: rgba(59, 58, 58, 0.808);
+    /* background-color: rgba(59, 58, 58, 0.808); */
+    background-image: url('https://i.pinimg.com/originals/55/4d/1a/554d1a1a0c034d27e369c17932e02dea.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     flex-direction: column;
     /* flex-wrap: wrap; */
     

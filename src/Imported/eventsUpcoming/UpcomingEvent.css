@@ -15,12 +15,12 @@
      justify-content: center;
      text-align: center;
     /* width: 23%; */
-    width:20vw;
+    width:25vw;
     background: white;
     margin: 10px 5%;
     /* padding: 3%; */
-    padding:10px 20px;
-    color:#eac15a;
+    padding:20px;
+    color:#2c2f3a;
     /* text-align: justify; */
   }
   .sectionn_box p{
@@ -84,7 +84,7 @@
        margin-left: 70px;
        margin-right: 115px;
        padding: 3%;
-       color:#eac15a;
+       color:#2c2f3a;
        text-align: justify;
        font-size: 10px;
      }

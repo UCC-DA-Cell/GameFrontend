@@ -43,6 +43,7 @@ body {
 	gap: 2em 2em;
   margin: 1.5em 0;
 	list-style: none;
+	padding-left: 0px;
 }
 
 .linne { 

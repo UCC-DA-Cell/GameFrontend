@@ -1,12 +1,21 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import './GoogleForm.css'
 import MainNav from '../../Imported/MainNav'
 
 const GoogleForm = () => {
+    const [reloadState,setReloadState]=useState(true);
+   useEffect(()=>{
+    
+   // window.location.reload();
+    setReloadState(false);
+    //window.location.reload()
+
+   },[reloadState])
+
     return (
         
            
-        <div style={{backgroundColor:'rgba(59, 58, 58, 0.808)',color:'whitesmoke',
+        <div className="bckground_gf"  style={{color:'whitesmoke',
          justifyContent:'center',textAlign:'center',paddingTop:'130px'}} >
              
             <h1 >Round 2</h1><br/>

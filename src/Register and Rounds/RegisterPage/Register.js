@@ -9,8 +9,8 @@ const Register = () => {
                 <div className="flex_box_events" >
                    <RegisterCard event_name="XYZ-Event"
                     event_details="This Event
-                    consists of 4 Rounds. Totally based on quizzes,riddles,puzzles,picture
-                     manipulation. Main aim of this event is check and develop technical skills of the 
+                    consists of 4 Rounds. Totally based on quizzes,riddles,puzzles etc.
+                     Main aim of this event is check and develop technical skills of the 
                      competitor. "  />
                 </div>
             </div>

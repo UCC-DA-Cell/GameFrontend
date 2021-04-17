@@ -4,6 +4,19 @@ import {Link} from 'react-router-dom'
 import { Button } from 'reactstrap'
 const Counter = () => {
     const [startbtn,setStartBtn]=useState(true);
+    let i=0,I_D;
+    const reloadState=()=>{
+        i++;
+        if(i==2){
+            clearTimeout(I_D);
+            window.location.reload(false);
+            i=0;
+        }
+        else{
+            I_D= setTimeout(reloadState,1000);
+        }
+       
+    }
     let finalDate= new Date('Feb 27,2021 14:54:00').getTime();
 const calculate=()=>{
     const now= new Date().getTime();
@@ -66,7 +79,7 @@ const calculate=()=>{
                <div id="second">NA</div>
             </div>
             <Link to="/Round1_begins"><Button style={{marginTop:'20px'}} color="success" disabled={startbtn}  >START</Button></Link>
-            <Link to="/round2"><Button style={{marginTop:'20px'}} color="success" disabled={startbtn}  >START</Button></Link>
+            <Link to="/round2"><Button style={{marginTop:'20px'}} color="success" disabled={startbtn} onClick={reloadState}  >START</Button></Link>
             <Link to="/round3"><Button style={{marginTop:'20px'}} color="success" disabled={startbtn}  >START</Button></Link>
         </div>
     )

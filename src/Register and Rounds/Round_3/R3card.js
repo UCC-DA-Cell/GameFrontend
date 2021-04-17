@@ -5,11 +5,13 @@ import './R3card.css'
 const R3card = (props) => {
     const auth= useContext(AuthContext)
     const [checkedId,setCheckedId]=useState();
+    
     const getId=(event)=>{
           setCheckedId(event);
     }
    const checkQuesHandler=async()=>{
     let chk=document.getElementById(checkedId);
+   props.setIsLoading(true);
     if(chk){
         chk.checked=false;
     }
@@ -24,6 +26,7 @@ const R3card = (props) => {
         optionID:checkedId
       })
     })
+    props.setIsLoading(false);
     if(res.status===200){
         console.log('correct ans');
         props.setQuesState(true);
@@ -38,19 +41,19 @@ const R3card = (props) => {
 
    }
     return (
-        
-            <div className="wrapper_card">
-            {/* <p>Links from <a href="https://sitepoint.com" tabindex="0">sitepoint.com</a></p> */}
+           
+          <div className="wrapper_card">
+           
 
             <ul className="linegrp" >
             <li className="linne" >
             <div className="info-wrap">
             <h2 className="hding" >{`${!props.ques?'NA':'Q '+ props.ques.questionNumber +': '+ props.ques.question}`}</h2>
 
-          
-             <div style={{textAlign:'left'}}>
+            {props.ques && props.ques.questionImage && <div  > <img src={props.ques.questionImage} alt="questionImage" height="200px" width="200px"  />  </div>}
+             <div style={{textAlign:'left',marginTop:'5px'}}>
                 {props.ques && props.ques.options.map((p,i)=>(
-                    <div>
+                    <div  >
                          <input id={p._id} style={{margin:'5px'}} type="radio" name="options" onClick={event=>getId(p._id)} />
                          <label for={`o${i}`}>{p.value}  </label><br/>
                     </div>
@@ -65,8 +68,8 @@ const R3card = (props) => {
             </ul>
 
             </div>
-
-
+                
+            
 
 
         

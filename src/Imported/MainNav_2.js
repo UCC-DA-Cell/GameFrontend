@@ -18,7 +18,7 @@ const MainNav_2 = () => {
                 <nav className="navbar navbar-expand-lg navbar-light bg-light sticky" style={{zIndex:1000}} >
             <button className="navbar-toggler" type="button" style={{float:'left',border:'none'}} aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" onClick={openNav}>
             <span>
-                <img src="https://ik.imagekit.io/slashit/choco_divine/121994_bA7-vUbdM.png" alt="chocomenu" style={{width:'40px',height:'40px',zIndex:'2'}} />
+                <img src="https://img.icons8.com/windows/2x/menu--v4.gif" alt="chocomenu" style={{width:'40px',height:'40px',zIndex:'2'}} />
             </span>
             </button>
             {/* <!-- <a href="#"><span class="fa fa-user"></span></a> --> */}
@@ -59,7 +59,7 @@ const MainNav_2 = () => {
 
     {/* nav bar ends */}
             <div id="mySidenav" className="sidenav">
-            <NavLink to="/" className="closebtn" onClick={closeNav}>&times;</NavLink>
+            <a href="#" className="closebtn" onClick={closeNav}>&times;</a>
             <NavLink className="nav-link" to="/" onClick={closeNav}>HOME <span className="sr-only">(current)</span></NavLink>
             <NavLink  to="/about" onclick={closeNav}>ABOUT</NavLink>
             { auth.isLoggedIn &&

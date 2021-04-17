@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import {
   Carousel,
   CarouselItem,
@@ -6,8 +6,12 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import Aos from 'aos'
 import {useMediaQuery} from 'beautiful-react-hooks'
  import '../../node_modules/bootstrap/dist/css/bootstrap.css'
+ import '../../node_modules/aos/dist/aos'
+ import '../../node_modules/aos/dist/aos.css'
+
 const items = [
   {
     src: 'https://player.vimeo.com/external/368763065.sd.mp4?s=13988c9dbaddf24bcbceb333cc76d1936255e78a&profile_id=139&oauth2_token_id=57447761',
@@ -28,6 +32,9 @@ const items = [
 ];
 
 const Example = (props) => {
+  useEffect(()=>{
+    Aos.init({duration:1000})
+},[])
   const mediaQuery=useMediaQuery('(max-width:450px)')
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
@@ -70,7 +77,7 @@ const Example = (props) => {
             
             </video>
       
-        <h3 style={{marginTop:'0px',position:'relative',top:'-40vh',color:'white'}}  >{item.caption}</h3>
+        <h3 data-aos="fade-left"  style={{marginTop:'0px',position:'relative',top:'-40vh',color:'white'}}  >{item.caption}</h3>
         </React.Fragment>}
        
       </CarouselItem>

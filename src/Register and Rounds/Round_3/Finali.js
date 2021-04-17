@@ -1,6 +1,8 @@
 import React,{useEffect,useState,useContext} from 'react'
 import R3card from './R3card'
 import {AuthContext} from '../../Authentication/Auth-context/authContext'
+import LoadingSpinner from '../../Imported/LoadingSpinner/LoadingSpinner'
+
 const Finali = () => {
     const auth= useContext(AuthContext)
     const DUMMY_QUESTION={
@@ -12,6 +14,7 @@ const Finali = () => {
         ]
     }
     const [ques,setQues]=useState();
+    const [isLoading,setIsLoading]=useState(false);
     const [quesState,setQuesState]=useState(true);
     const [complete,setComplete]=useState(false);
     useEffect(()=>{
@@ -30,6 +33,7 @@ const Finali = () => {
         }
         else{
             const data=await res.json();
+            console.log(data);
             setQues(data);
         }
      }
@@ -39,18 +43,20 @@ const Finali = () => {
         
     
     return (
-        <div style={{backgroundColor:'rgba(59, 58, 58, 0.808)',color:'whitesmoke',
-        justifyContent:'center',textAlign:'center',paddingTop:'130px',height:'100vh',width:'100vw'}} >
+        <React.Fragment>
+       { !isLoading ? <div className="bckground_gf"  style={{color:'whitesmoke',
+        justifyContent:'center',textAlign:'center',paddingTop:'130px',height:'100vh',width:'100vw',maxHeight:'100vh',overflow:'auto'}} >
             
            <h1 >Round 3</h1><br/>
            <h2>Find The Web</h2>
-            {!complete && <R3card ques={ques} setQuesState={setQuesState} />}
+            {!complete && <R3card ques={ques} setQuesState={setQuesState} setIsLoading={setIsLoading} />}
             {complete && <div>
                 
                 <h1 style={{color:'white'}} >Thank You For Submitting.</h1>
                 <h2  style={{color:'white'}}>Result will be out soon</h2>
                 </div>}
-       </div>
+       </div> : <LoadingSpinner /> }
+       </React.Fragment>
     )
 }
 

@@ -1,5 +1,6 @@
-import React,{useContext} from 'react'
+import React,{useContext,useState} from 'react'
 import './QuizCard.css'
+import VerifyQuesModel from './VerifyQuesModel'
 import { Card,Col,FormGroup,Label,  CardHeader, CardFooter, CardBody,
     CardTitle, CardText,
     InputGroup,
@@ -11,11 +12,15 @@ import { Card,Col,FormGroup,Label,  CardHeader, CardFooter, CardBody,
     DropdownMenu,
     DropdownItem } from 'reactstrap';
 import {AuthContext} from '../../Authentication/Auth-context/authContext' 
+import IncorrectQuesModal from './IncorrectQuesModal';
 const QuizCard = (props) => {
   const auth= useContext(AuthContext);
   const changeQues=(i)=>{
     props.nextQues(i);
   }
+
+  const [modal,setModal]=useState(false);
+  const [modal2,setModal2]=useState(false);
   const valueHandler=(event)=>{
     props.setUserAns(event.target.value);
   }
@@ -42,6 +47,7 @@ const QuizCard = (props) => {
   else if(res.status==203){
     let ID;
     let sec=0;
+    setModal2(true);
     ID=setInterval(()=>{
       if(sec>5){
         let hdr=document.getElementById('status');
@@ -67,6 +73,9 @@ const QuizCard = (props) => {
   }
     return (
         <div  >
+          <React.Fragment>
+            <VerifyQuesModel modal={modal} setModal={setModal} checkQuestionHandler={checkQuestionHandler}  />
+            <IncorrectQuesModal modal={modal2} setModal={setModal2} />
       { props.ques &&  <Card className="res_card"  inverse color="info" >
         <CardHeader>{`Question:${props.ques.questionNumber} `}</CardHeader>
         <CardBody>
@@ -83,12 +92,13 @@ const QuizCard = (props) => {
           </FormGroup>
         </Col> */}
           </CardText>
-          <Button  color="success" onClick={checkQuestionHandler}  >Submit</Button>
+          <Button  color="success" onClick={event=>setModal(true)}  >Submit</Button>
         </CardBody>
         <CardFooter>
           <div id="status" style={{display:'none',transition:'all 0.3s', transitionTimingFunction:'ease-in', color:'red'  }} >InCorrect Ans</div>
         </CardFooter>
       </Card>}
+      </React.Fragment>
         </div>
     )
 }

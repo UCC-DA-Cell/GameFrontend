@@ -19,6 +19,7 @@ import LeaderBoard from './LeaderBoard/LeaderBoard';
 import GoogleForm from './Register and Rounds/Round_2/GoogleForm';
 import Finali from './Register and Rounds/Round_3/Finali';
 import MainNav_2 from './Imported/MainNav_2';
+
 //require('dotenv').config()
 function App() {
   const [isLoggedIn,setIsLoggedIn]=useState(false);
@@ -60,6 +61,7 @@ useEffect(() => {
        </Route>
        <Route path="/auth" exact>
          <Auth />
+        
        </Route>
        <Route path="/register" exact>
         <Register />
@@ -92,6 +94,7 @@ useEffect(() => {
          <MainNav_2 />
          <Finali />
        </Route>
+       
        </Switch>
        </AuthContext.Provider>
      </Router>

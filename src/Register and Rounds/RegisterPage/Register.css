@@ -2,6 +2,8 @@
 .main__regsiter{
     height:100vh;
     background-color: rgba(59, 58, 58, 0.808);
+    max-height: 100vh;
+    overflow: auto;
 }
 .register__page{
     display: flex;
@@ -14,6 +16,8 @@
 }
 .flex_box_events{
     display: flex;
+    text-align: justify;
     flex-direction: column;
     margin:3rem;
+
 }

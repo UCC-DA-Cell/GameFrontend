@@ -5,9 +5,12 @@ import lock from './padlock.svg'
 import {AuthContext} from '../Authentication/Auth-context/authContext'
 import './Auth.css'
 import MainNav_2 from '../Imported/MainNav_2'
+import LoadingSpinner from '../Imported/LoadingSpinner/LoadingSpinner'
 const Auth = () => {
   const auth=useContext(AuthContext);
+  const[isLoading,setIsLoading]=useState(false);
   const handleLogin = async googleData => {
+    setIsLoading(true);
     const res = await fetch(`${process.env.REACT_APP_SERVER_URL}users/login`, {
         method: "POST",
         body: JSON.stringify({
@@ -18,32 +21,36 @@ const Auth = () => {
       }
     })
     const data = await res.json();
+      setIsLoading(false);
       auth.logIn(data.token,data.isRegistered);
+      
     // store returned user somehow
   }
 
     return (
-        <div style={{backgroundImage:`url(${`https://wallpaperaccess.com/full/54720.jpg`})`,backgroundAttachment:'fixed',backgroundRepeat:'no-repeat',
-        backgroundSize:'cover', backgroundPosition:'center center', opacity:'0.8',height:'100vh',width:'100vw' }}  >
+      <React.Fragment>
+        { !isLoading ? <div style={{backgroundImage:`url(${`https://cdn.wallpapersafari.com/97/60/NFYlrT.jpg`})`,backgroundAttachment:'fixed',backgroundRepeat:'no-repeat',
+        backgroundSize:'cover', backgroundPosition:'center center',height:'100vh',width:'100vw' }}  >
             <MainNav_2 /><br/><br/><br/><br/>
              <div className="welcomee">
              <h2 className="signIn__text"  >Sign-In here</h2>
             </div>
-                    <div className="form_class">
-                    <img src={lock} alt="login" style={{height:'40vh',width:'50vw'}} /> 
-                    <form className="formm" >
+                <div className="form_class">
+                <img src={lock} alt="login" style={{height:'40vh',width:'50vw'}} /> 
+                <form className="formm" >
+              
+                  <GoogleLogin
+                    clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
                   
-                      <GoogleLogin
-                        clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-                      
-                      buttonText="Log in with Google"
-                      onSuccess={handleLogin}
-                      onFailure={handleLogin}
-                      cookiePolicy={'single_host_origin'}
-                      />
-                    </form>
-                    </div>
-       </div>
+                  buttonText="Log in with Google"
+                  onSuccess={handleLogin}
+                  onFailure={handleLogin}
+                  cookiePolicy={'single_host_origin'}
+                  />
+                </form>
+                </div>
+       </div> : <LoadingSpinner />}
+       </React.Fragment>
     )
 }
 
